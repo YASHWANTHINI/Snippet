@@ -1,1 +1,55 @@
-
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>User Interaction</title>
+        <script>
+            function show1() {
+                if(document.getElementById('yesCheck').checked){
+                document.getElementById('div1').style.visibility = 'visible';
+                document.getElementById('div2').style.visibility = 'hidden';
+            }
+            }
+            function show2() {
+                if(document.getElementById('noCheck').checked){
+                document.getElementById('div2').style.visibility = 'visible';
+                document.getElementById('div1').style.visibility = 'hidden';
+            }
+            }
+        </script>
+    </head>
+   <body>
+<div class="form-group">
+            <label asp-for="Placement_flag" class="control-label"></label>
+            <div class="radio-inline">
+                <label> Yes
+                   <input type="radio" onclick="show1();" name="yesno" id="yesCheck">
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>No
+            <input type="radio" onclick="show2();" name="yesno" id="noCheck"><br>
+        </label>
+        </div>
+        <span asp-validation-for="Placement_flag" class="text-danger"></span>
+        </div>
+        <div class="form-group" id="div1" style="visibility:hidden">
+            <label asp-for="placement_domain" class="control-label"></label>
+            <select class="form-control" asp-for="placement_domain">
+                <option value="Core">Core</option>
+                <option value="IT">IT</option>
+                <option value="Non-Core or Non-IT">Non-Core or Non-IT</option>
+                <option value="Both Core and IT">Both Core and IT</option>
+            </select>
+            <span asp-validation-for="placement_domain" class="text-danger"></span>
+        </div>
+        <div class="form-group" id="div2" style="visibility: hidden;">
+            <label asp-for="Placement_not_domain" class="control-label"></label>
+            <select class="form-control" asp-for="Placement_not_domain">
+                <option value="Higher Studies">Higher Studies</option>
+                <option value="Entrepreneurship">Entrepreneurship</option>
+                <option value="Others">Others</option>
+            </select>
+            <span asp-validation-for="Placement_not_domain" class="text-danger"></span>
+        </div>
+    </body>
+</html>
