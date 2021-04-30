@@ -6,5 +6,5 @@
 --
 ## Burst Mojs Animation
    * index.html
-     ``` Description: Motion graphics using``` [Mo js](https://mojs.github.io/)
-     [My Codepen](https://codepen.io/DizIzYash/pen/GRrabXG)
+     ``` Description: Motion graphics using``` [Mo js](https://mojs.github.io/) <br>
+     [My Snippet in Codepen](https://codepen.io/DizIzYash/pen/GRrabXG)
