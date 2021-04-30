@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Burst | Mo.js</title>
+  </head>
+  <script>
+  var burstA = new mojs.Burst({
+  count: 30,
+  angle: {
+    0: 210
+  },
+  radius: {
+    0: 200
+  },
+  children: {
+    shape: "line",
+    stroke: "black",
+    radius: 20,
+    angle: {
+      0: 360
+    },
+    duration: 5000
+  }
+});
 
+document.querySelector(".btn_module").addEventListener("click", function() {
+  burstA.play();
+});
+  </script>
+  <style>
+    body{
+  text-align:center; 
+  background-color:#65ddb7;
+}
+
+.container {
+  perspective: 100px;
+  height: 300px;
+}
+
+.btn_module {
+  background:  #ffb457;
+  border: none;
+  color: black;
+  font-family: 'Lato';
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+  margin: 10px 2px;
+  font-size: 80px;
+}
+  </style>
+<body>
+  <button class="btn_module">Click Me</button>
+<div class="container">
+</div>
+  </body>
