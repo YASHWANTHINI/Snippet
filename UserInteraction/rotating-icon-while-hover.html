@@ -1,0 +1,45 @@
+<!DOCTYPR html>
+<html>
+  <head>
+    <title> Rotating Icon while hover</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+   
+    <a href="#">
+        <i class="fab fa-font-awesome"></i>
+    </a>
+    
+    
+    <style>
+    body{
+   text-align:center;
+   padding:40px;
+}
+
+a {
+ 
+    font-size: 55px;
+    color: black;
+    transform: rotate(0deg) scale(1);
+    transition: 0.5s;
+
+    /* inline-block is the trick  */
+    display: inline-block;
+}
+
+a:hover {
+    transition: 0.5s;
+    transform: rotate(360deg) scale(1.5);
+}
+/*
+to change color of the icon
+i {
+background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+*/
+    </style>
+  </body>
+</html>
